@@ -1,28 +1,37 @@
 /**
- * @file main.cpp
+ * @file sorting.cpp
  * @brief This is a test of CMake, doxygen, and GitHub.
  * @details This is the long brief at the top of main.cpp.
- * @author Seth McNeill
- * @date 1/28/2021
+ * @author Benson Nyakango
+ * @date 4/19/2021
  * 
  */
 
-#include <iostream>
-
-
-/**
- * Add two integers (brief)
- * 
- * Adds a and b, two integers (long description)
- * @param a integer
- * @param b integer
- * @returns integer sum of a and b
- */
-int add(int a, int b) {
-    return(a + b);
+#include<iostream>
+using namespace std;
+void selectionSort(int a[], int n) {
+   int i, j, min, temp;
+   for (i = 0; i < n - 1; i++) {
+      min = i;
+      for (j = i + 1; j < n; j++)
+      if (a[j] < a[min])
+      min = j;
+      temp = a[i];
+      a[i] = a[min];
+      a[min] = temp;
+   }
 }
-
-
-int main(int, char**) {
-    std::cout << "Hello, world! Ver 2.1\n";
+int main() {
+   int a[] = { 22, 91, 35, 78, 10, 8, 75, 99, 1, 67 };
+   int n = sizeof(a)/ sizeof(a[0]);
+   int i;
+   cout<<"Given array is:"<<endl;
+   for (i = 0; i < n; i++)
+   cout<< a[i] <<" ";
+   cout<<endl;
+   selectionSort(a, n);
+   printf("\nSorted array is: \n");
+   for (i = 0; i < n; i++)
+   cout<< a[i] <<" ";
+   return 0;
 }

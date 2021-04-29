@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_8',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]]
+  ['selectionsort_8',['selectionSort',['../main_8cpp.html#a15ddf346bc3418b47965de88cf65d9f4',1,'main.cpp']]]
 ];
